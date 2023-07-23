@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <div class="title">
+                <h2>Tip<br />Calculator</h2>
+            </div>
+        </header>
+        <main>
+            <div class="card">
+                <div class="card-body-left">
+                    <div class="bill-section">
+                        <label>Bill</label>
+                        <input type="number" placeholder="0" />
+                    </div>
+                    <div class="tip-section">
+                        <h4>Select Tip %</h4>
+                        <div class="btn-grp">
+                            <button class="btn">5%</button>
+                            <button class="btn">10%</button>
+                            <button class="btn">15%</button>
+                            <button class="btn">25%</button>
+                            <button class="btn">50%</button>
+                            <input type="text" placeholder="Custom" />
+                        </div>
+                    </div>
+                    <div class="people-section">
+                        <label>Number of People</label>
+                        <input type="number" placeholder="1" />
+                    </div>
+                </div>
+                <div class="card-body-right">
+                    <div class="result">
+                        <div class="total-person-section">
+                            <div class="tip-amount-section-title">
+                                <h4>Total</h4>
+                                <p>/ person</p>
+                            </div>
+                            <span class="span">$0.00</span>
+                        </div>
+                        <div class="tip-amount-section">
+                            <div class="tip-amount-section-title">
+                                <h4>Tip Amount</h4>
+                                <p>/ person</p>
+                            </div>
+                            <span class="span">$0.00</span>
+                        </div>
+                        <div class="button-control">
+                            <button class="btn btn-reset">RESET</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
