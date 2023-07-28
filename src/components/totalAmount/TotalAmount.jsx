@@ -1,5 +1,5 @@
 const TotalAmount = ({ billAmount, person }) => {
-  const totalAmount = billAmount / person;
+  let totalAmount = parseFloat(billAmount / person);
 
   return (
     <div className="total-person-section">
