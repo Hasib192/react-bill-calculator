@@ -10,26 +10,6 @@ const Main = () => {
   const [tip, setTip] = useState(0);
   const [person, setPerson] = useState(1);
 
-  const handleBillChange = (e) => {
-    const num = parseFloat(e.target.value);
-
-    if (isNaN(num)) {
-      setBill(0);
-    } else {
-      setBill(num);
-    }
-  };
-
-  const handlePeopleChange = (e) => {
-    setPerson(parseInt(e.target.value));
-  };
-
-  const preventMinus = (e) => {
-    if (e.key === "-") {
-      e.preventDefault();
-    }
-  };
-
   const handleTipChange = (tip) => {
     setTip(tip);
   };
@@ -44,9 +24,9 @@ const Main = () => {
     <main>
       <div className="card">
         <div className="card-body-left">
-          <InputField label="Bill" className="bill-section" min="0" placeholder="0" handleBillChange={handleBillChange} preventMinus={preventMinus} />
+          <InputField label="Bill" className="bill-section" min="0" placeholder="0" handleInputChange={(e) => isFinite(parseInt(e.target.value) ? setBill(e.target.value) : setBill(0))} />
           <SelectTip onChange={handleTipChange} />
-          <InputField label="Number of People" className="people-section" min="1" placeholder="1" handlePeopleChange={handlePeopleChange} preventMinus={preventMinus} />
+          <InputField label="Number of People" className="people-section" min="1" placeholder="1" handleInputChange={(e) => isFinite(parseInt(e.target.value) ? setPerson(e.target.value) : setPerson(1))} />
         </div>
         <div className="card-body-right">
           <div className="result">

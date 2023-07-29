@@ -1,10 +1,11 @@
-const TotalAmount = ({ billAmount, person }) => {
-  let totalAmount = parseFloat(billAmount / person);
+const TotalAmount = ({ billAmount, person = 1 }) => {
+  let totalAmount = billAmount / person;
+  console.log(person);
 
   return (
     <div className="total-person-section">
       <div className="tip-amount-section-title">
-        <h4>Total</h4>
+        <h4>Bill</h4>
         <p>/ person</p>
       </div>
       <span className="span">${totalAmount.toFixed(2)}</span>
